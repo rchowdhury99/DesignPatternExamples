@@ -1,5 +1,9 @@
 package injection;
 
+/**
+ * This class makes use of the Injection Design Pattern because it injects
+ * a dependency with a constructor or a setter
+ */
 public class ClassWithDependency {
   
   private Dependency d;

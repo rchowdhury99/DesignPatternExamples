@@ -11,22 +11,22 @@ import java.util.Queue;
 public class Matrix implements Iterable<Integer>{
 
   private Integer[][] matrix;
-  
+
   public Matrix(Integer[][] matrix) {
     this.matrix = matrix;
   }
-  
+
   private class MatrixIterator implements Iterator<Integer> {
 
     private Queue<Integer> queue;
-    
+
     public MatrixIterator(Integer[][] matrix) {
       this.queue = new LinkedList<Integer>();
       for(int row = 0; row<matrix.length; row++)
         for(int col = 0; col<matrix[0].length; col++)
           this.queue.add(matrix[row][col]);
     }
-    
+
     @Override
     public boolean hasNext() {
       return !this.queue.isEmpty();
@@ -36,9 +36,8 @@ public class Matrix implements Iterable<Integer>{
     public Integer next() {
       return this.queue.poll();
     }
-    
   }
-  
+
   @Override
   public Iterator<Integer> iterator() {
     return new MatrixIterator(this.matrix);

@@ -7,5 +7,5 @@ public class Driver {
     System.out.println("Ingredients: " + pizza.getDescription());
     System.out.print("Cost: " + pizza.getCost());
   }
-  
+
 }
